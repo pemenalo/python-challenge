@@ -1,4 +1,5 @@
 # Your task is to create a Python script that analyzes the records to calculate each of the following:
+
 #import the csv file 
 import os
 
@@ -10,6 +11,12 @@ with open(r'\Users\hitst\Documents\GitHub\python-challenge\PyBank\Resources\budg
     csvreader = csv.reader(csvfile, delimiter=',')
 
     print(csvreader)
+
+    totalmonths = len(list(csvreader))
+    
+    print(totalmonths - 1)
+
+
 
 
 
