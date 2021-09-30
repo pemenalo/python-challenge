@@ -7,20 +7,32 @@ import csv
 
 with open(r'\Users\hitst\Documents\GitHub\python-challenge\PyBank\Resources\budget_data.csv') as csvfile:
 
-    # CSV reader specifies delimiter and variable that holds contents
+# CSV reader specifies delimiter and variable that holds contents
     csvreader = csv.reader(csvfile, delimiter=',')
 
     print(csvreader)
+
+# The total number of months included in the dataset, while accountingg for the header row
 
     totalmonths = len(list(csvreader))
     
     print(totalmonths - 1)
 
+# The net total amount of "Profit/Losses" over the entire period
+    csv_header = next(csvreader)
+    print (f"csv header: {csvreader}")
+    
 
 
 
 
-# The total number of months included in the dataset
+
+        
+
+    
+
+
+
 
 
 # The net total amount of "Profit/Losses" over the entire period
