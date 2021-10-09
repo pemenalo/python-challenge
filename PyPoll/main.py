@@ -5,28 +5,33 @@ VOTER_COL = 0
 COUNTY_COL = 1
 CAND_COL = 2
 
+
 with open(os.path.join('PyPoll', 'Resources', 'election_data.csv')) as csvfile:
     # CSV reader specifies delimiter and variable that holds contents
     csvreader = csv.reader(csvfile, delimiter=',')
     
+     # Next header
     next(csvreader)
     first_row = next(csvreader)
-    # print(first_row)
-    voter_count = 0 
+    lines = len(list(csvreader))
+    print(lines)
+   
+   
+    votes_count = 0 
     candidate_list = []
     vote_percent_value = 0
     total_vote_count = 0 
+    current_vote = first_row[VOTER_COL]
     winner = []
 
-    voter_count = 1
-    voter_count = first_row[VOTER_COL]
+    votes_count = 1
+    current_vote = first_row[VOTER_COL]
     candidate_list = first_row[CAND_COL]
     
-    # voter_count = 
-
     # for row in csvreader:
-        
-        
+    #     votes_count += 1
+    #     current_vote = first_row[VOTER_COL]
+    #     print(f"Total: {votes_count}")
     # voter_data = list(csvreader)
     # next(csvreader)
     # first_row = next(csvreader)

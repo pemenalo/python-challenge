@@ -59,8 +59,7 @@ with open(output_path, 'w') as csvfile:
     # write the header
     csvwriter.writerow(['Financial Analysis'])
     # write the data
-    csvwriter.writerow(['Month Total: 86', 
-    'Current Total: 38382578', 'Greatest Increase: 1926159', 'Greatest Decrease: -2196167', 'Average Net Change: -2315.1176470588234'])
+    csvwriter.writerow(['Month Total: 86', 'Current Total: 38382578', 'Greatest Increase: 1926159', 'Greatest Decrease: -2196167', 'Average Net Change: -2315.1176470588234'])
         
     
 
