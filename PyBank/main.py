@@ -57,7 +57,7 @@ output_path = os.path.join('PyBank', 'Resources', 'solved_budget_data.csv')
 with open(output_path, 'w') as csvfile:
     csvwriter = csv.writer(csvfile, delimiter=',')
     # write the header
-    csvwriter.writerow(['Finacial Analysis'])
+    csvwriter.writerow(['Financial Analysis'])
     # write the data
     csvwriter.writerow(['Month Total: 86', 
     'Current Total: 38382578', 'Greatest Increase: 1926159', 'Greatest Decrease: -2196167', 'Average Net Change: -2315.1176470588234'])
