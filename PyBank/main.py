@@ -3,7 +3,6 @@
 #import the csv file 
 import os
 import csv
-from types import prepare_class
 
 DATE_COL = 0
 PL_COL = 1
@@ -50,17 +49,14 @@ with open(os.path.join('PyBank', 'Resources', 'budget_data.csv')) as csvfile:
     average_change = total_change / (month_count - 1)
     print(f"Average Net Change: {average_change}")
 
-    header = ['name', 'area', 'country_code2', 'country_code3']
-data = ['Afghanistan', 652090, 'AF', 'AFG']
-
-output_path = os.path.join('PyBank', 'Resources', 'solved_budget_data.csv')
+output_path = os.path.join('PyBank', 'Analysis', 'solved_budget_data.csv')
 with open(output_path, 'w') as csvfile:
-    csvwriter = csv.writer(csvfile, delimiter=',')
-    # write the header
-    csvwriter.writerow(['Financial Analysis'])
-    # write the data
-    csvwriter.writerow(['Month Total: 86', 'Current Total: 38382578', 'Greatest Increase: 1926159', 'Greatest Decrease: -2196167', 'Average Net Change: -2315.1176470588234'])
-        
-    
-
-  
+    csvwriter = csv.writer(csvfile, delimiter=',', lineterminator = '\n')
+    # Header and Written Text
+    csvwriter.writerow(['Financial Analysis:\n'
+    '------------------:\n'
+    'Month Total: '+ str(month_count) , "\n"
+    'Current Total: '+ '$'+str(pl_total) , "\n"
+    'Greatest Increase: ' + '$'+ str(current_month) + ' ' + str(max(change_list)) , "\n"
+    'Greatest Decrease: ' + '$'+ str(current_month) + ' ' + str(min(change_list)) , "\n"
+    'Average Net Change: ' + '$'+str(round(average_change ,2))])    
