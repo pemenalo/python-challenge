@@ -2,7 +2,7 @@
 
 Python Homework:
 ------------------
-Part 1
+Part 1 - 
 PyBank Assignment:
 
 1) The total number of months included in the dataset
@@ -17,7 +17,7 @@ PyBank Assignment:
 
 6) In addition, your final script should both print the analysis to the terminal and export a text file with the results.
 ------------------
-Part 2
+Part 2 - 
 PyPoll Assignment:
 
 1)The total number of votes cast
