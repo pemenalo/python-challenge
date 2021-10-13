@@ -37,7 +37,7 @@ with open(os.path.join('PyPoll', 'Resources', 'election_data.csv')) as csvfile:
         Cpercent = C_votes/total_votes
         Lpercent = L_votes/total_votes
         Opercent = O_votes/total_votes
-    # The winner of the election based on popular vote.
+        # The winner of the election based on popular vote.
         if K_votes > C_votes and K_votes > L_votes and K_votes > O_votes:
             Winner = "Khan"
         elif C_votes >K_votes and C_votes > L_votes and C_votes > O_votes:
