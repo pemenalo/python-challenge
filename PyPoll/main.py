@@ -21,7 +21,7 @@ with open(os.path.join('PyPoll', 'Resources', 'election_data.csv')) as csvfile:
     L_votes =0
     O_votes =0
     total_votes = 0
-    # dict_list = []
+    # A complete list of candidates who received votes
     for row in csv_reader:
         total_votes = total_votes + 1
         if (row[CAND_COL] == "Khan"):
@@ -37,7 +37,7 @@ with open(os.path.join('PyPoll', 'Resources', 'election_data.csv')) as csvfile:
         Cpercent = C_votes/total_votes
         Lpercent = L_votes/total_votes
         Opercent = O_votes/total_votes
-
+        # The percentage of votes each candidate won
         if K_votes > C_votes and K_votes > L_votes and K_votes > O_votes:
             Winner = "Khan"
         elif C_votes >K_votes and C_votes > L_votes and C_votes > O_votes:
@@ -46,7 +46,7 @@ with open(os.path.join('PyPoll', 'Resources', 'election_data.csv')) as csvfile:
             Winner = "Li"
         elif O_votes > K_votes and O_votes > C_votes and O_votes >L_votes:
             Winner = "O'Tooley"
-
+    # The winner of the election based on popular vote.
     print("Election Results")
     print(".........................")
     print("Total Votes " + str(total_votes))
@@ -58,10 +58,7 @@ with open(os.path.join('PyPoll', 'Resources', 'election_data.csv')) as csvfile:
     print(".........................")
     print("Winner: " + Winner)
     print(".........................")
-
-
-
-
+#Print to a text file
 output_path = os.path.join('PyPoll', 'Analysis', 'solved_election_data.csv')
 with open(output_path, 'w') as csvfile:
     csvwriter = csv.writer(csvfile, delimiter=' ')
@@ -76,15 +73,3 @@ with open(output_path, 'w') as csvfile:
     '------------------:\n'
     'Election Winner: '+ Winner]), "\n"
     '------------------:\n'
-
-# A complete list of candidates who received votes
-   
-
-# The percentage of votes each candidate won
-
-
-# The total number of votes each candidate won
-
-
-# The winner of the election based on popular vote.
-
