@@ -52,7 +52,7 @@ with open(os.path.join('PyBank', 'Resources', 'budget_data.csv')) as csvfile:
 output_path = os.path.join('PyBank', 'Analysis', 'solved_budget_data.csv')
 with open(output_path, 'w') as csvfile:
     csvwriter = csv.writer(csvfile, delimiter=',', lineterminator = '\n')
-    # Header and Written Text
+    # Header and Written Text file to analysis folder
     csvwriter.writerow(['Financial Analysis:\n'
     '------------------:\n'
     'Month Total: '+ str(month_count) , "\n"
