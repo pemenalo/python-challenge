@@ -1,10 +1,10 @@
 # python-challenge
 
-Python Homework
+Python Homework:
 ------------------
-
+Part 1
 PyBank Assignment:
-------------------
+
 1) The total number of months included in the dataset
 
 2) The net total amount of "Profit/Losses" over the entire period
@@ -16,10 +16,10 @@ PyBank Assignment:
 5) The greatest decrease in profits (date and amount) over the entire period
 
 6) In addition, your final script should both print the analysis to the terminal and export a text file with the results.
-
-
-PyPoll Assignment:
 ------------------
+Part 2
+PyPoll Assignment:
+
 1)The total number of votes cast
 
 2) A complete list of candidates who received votes
